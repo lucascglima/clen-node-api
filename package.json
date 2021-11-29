@@ -1,0 +1,19 @@
+{
+  "name": "clen-node-api",
+  "version": "1.0.0",
+  "description": "API Node utilizando clean architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucascglima/clen-node-api.git"
+  },
+  "author": "Lucas Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucascglima/clen-node-api/issues"
+  },
+  "homepage": "https://github.com/lucascglima/clen-node-api#readme"
+}
