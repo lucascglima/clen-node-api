@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lucascglima/clen-node-api/issues"
   },
-  "homepage": "https://github.com/lucascglima/clen-node-api#readme"
+  "homepage": "https://github.com/lucascglima/clen-node-api#readme",
+  "devDependencies": {
+    "standart": "^6.1.0"
+  }
 }
