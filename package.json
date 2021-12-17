@@ -4,7 +4,7 @@
   "description": "API Node utilizando clean architecture",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+     "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,14 @@
       "git add"
     ]
   },
-  "husky":{
-    "hooks":{
+  "husky": {
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "devDependencies": {
     "husky": "^7.0.4",
+    "jest": "^27.4.0",
     "lint-staged": "^12.1.2",
     "standard": "^16.0.4"
   }
