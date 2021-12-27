@@ -16,17 +16,6 @@
     "url": "https://github.com/lucascglima/clen-node-api/issues"
   },
   "homepage": "https://github.com/lucascglima/clen-node-api#readme",
-  "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "devDependencies": {
     "husky": "^7.0.4",
     "jest": "^27.4.0",
