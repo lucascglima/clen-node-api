@@ -16,7 +16,6 @@ const makeSut = () => {
     authUseCaseSpy
   }
 }
-
 describe('Login Router', () => {
   test('Shoud return 400 if no email is provided', () => {
     const { sut } = makeSut()
@@ -77,5 +76,31 @@ describe('Login Router', () => {
     const httpResponse = sut.route(httpRequest)
     expect(httpResponse.statusCode).toBe(401)
     expect(httpResponse.body).toEqual(new UnahthorizedError('password'))
+  })
+
+  test('Shoud return 500 if no authUseCase is provided', () => {
+    const sut = new LoginRouter()
+    const httpRequest = {
+      body: {
+        email: 'any_email@email.com',
+        password: 'any_password'
+      }
+    }
+    const httpResponse = sut.route(httpRequest)
+    expect(httpResponse.statusCode).toBe(500)
+  })
+
+  test('Shoud return 500 if has no auth method', () => {
+    class AuthUseCaseSpy {}
+    const authUseCase = new AuthUseCaseSpy()
+    const sut = new LoginRouter(authUseCase)
+    const httpRequest = {
+      body: {
+        email: 'any_email@email.com',
+        password: 'any_password'
+      }
+    }
+    const httpResponse = sut.route(httpRequest)
+    expect(httpResponse.statusCode).toBe(500)
   })
 })
