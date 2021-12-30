@@ -4,8 +4,8 @@
   "description": "API Node utilizando clean architecture",
   "main": "index.js",
   "scripts": {
-     "test": "jest --watchAll",
-     "test:staged": "jest --passWithNotests"
+     "test": "jest --watchAll --silent --verbose --colors --noStackTrace",
+     "test:staged": "jest --passWithNotests --findRelatedTests --silent" 
   },
   "standard":{
     "env":["jest"]
