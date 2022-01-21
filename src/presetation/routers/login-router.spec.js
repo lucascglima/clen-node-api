@@ -69,7 +69,7 @@ describe('Login Router', () => {
         password: 'any_password'
       }
     }
-    const httpResponse = await await sut.route(httpRequest)
+    const httpResponse = await sut.route(httpRequest)
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toEqual(new MissingParamError('email'))
   })
